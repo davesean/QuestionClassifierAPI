@@ -1,6 +1,6 @@
 # QuestionClassifierAPI
 
-A basic Flask API that takes in two values and return either 0 or 1.
+A basic Flask API that takes in two values and returns either 0 or 1.
 
 # Local
 
