@@ -25,7 +25,13 @@ docker run -i -t -p 5000:5000 qc
 ```
 The first docker command downloads all the required libraries and copies the files over into the container.
 The second command run it, while also forwarding the port, such that one can access it.
-Again using curl, one can send requests. This time the IP isn't the default local IP, but the IP of the virtual environment.
+Again using curl, one can send requests.
+To send a request with curl, we change the IP as follows:
+```
+curl -X GET "http://0.0.0.0:5000/api/v1/QC/?ql=90&np=1000"
+```
+# Docker-machine
+If you use a virtual machine, then the IP isn't the default local IP, but the IP of the virtual environment.
 To find the IP:
 ```
 docker-machine ls
