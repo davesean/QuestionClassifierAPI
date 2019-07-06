@@ -47,8 +47,10 @@ curl -X GET "http://192.168.90.101:5000/api/v1/QC/?ql=90&np=1000"
 ```
 # Training a model
 If you have data, you can train this model based on a fully connected neural network.
-To do this, have the data in a .csv file in the base folder and run:
+First you need to install all the required packages necessary and
+then with the data in a .csv file in the base folder, run:
 ```
+pip install -r requirements.txt
 python train_model.py
 ```
 After training, the model's checkpoint is directly saved into the api folder, where you can have requests answered either using it locally or with a docker container.
