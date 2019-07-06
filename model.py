@@ -1,6 +1,7 @@
 import tensorflow as tf
 from sklearn.preprocessing import StandardScaler
-from sklearn.externals.joblib import dump, load
+# from sklearn.externals.joblib import dump, load
+from joblib import dump, load
 import os
 import glob
 import numpy as np
