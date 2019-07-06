@@ -11,7 +11,7 @@ python api.py
 ```
 To send requests use either a browser or curl:
 ```
-curl -X GET "http://127.0.0.1:5000/api/v1/QC/?ql=90&np=1000"
+curl -X GET "http://0.0.0.0:5000/api/v1/QC/?ql=90&np=1000"
 ```
 The first value ql is the number of characters.
 The second value np stands for the number of purchases.
@@ -54,5 +54,9 @@ python train_model.py
 After training, the model's checkpoint is directly saved into the api folder, where you can have requests answered either using it locally or with a docker container.
 To have the model decide in the API, the curl request is extended by one parameter:
 ```
-curl -X GET "http://127.0.0.1:5000/api/v1/QC/?ql=90&np=1000&model=1"
+curl -X GET "http://0.0.0.0:5000/api/v1/QC/?ql=90&np=1000&model=1"
+```
+or for the docker virtual env:
+```
+curl -X GET "http://192.168.90.101:5000/api/v1/QC/?ql=90&np=1000&model=1"
 ```
