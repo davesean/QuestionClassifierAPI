@@ -53,10 +53,10 @@ def api_id():
         return "Error: Question length must be at larger than one and\
                 number of purchases must be non negative."
     if var3 == 0:
-        return 'Decision: %s' % str(simpleClassifier(var1, var2))
+        return 'Decision: %s\n' % str(simpleClassifier(var1, var2))
     else:
         dec, prob = fancyClassifier(var1, var2)
-        return 'Decision: %s Probability: %s' % (str(int(dec[0][0])), str(prob[0][0]))
+        return 'Decision: %s Probability: %s\n' % (str(int(dec[0][0])), str(prob[0][0]))
     # return '<h1>Result: %s</h1>' % str(simpleClassifier(var1, var2))
 
 app.run(port=5000, host='0.0.0.0')
